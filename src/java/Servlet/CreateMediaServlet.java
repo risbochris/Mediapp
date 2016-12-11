@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CreateMediaServlet", urlPatterns = {"/CreateMedia"})
 public class CreateMediaServlet extends HttpServlet {
 
-    public static final String GET_MEDIA = "creatioMedia.jsp";
+    public static final String GET_MEDIA = "WEB-INF/ajout_media.jsp";
     public static final String POST_MEDIA = "listMedias.jsp";
 
     @Override

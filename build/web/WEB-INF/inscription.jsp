@@ -1,6 +1,5 @@
 <%-- 
     Document   : inscription
-    Created on : ******
     Author     : risbochris
 --%>
 
@@ -25,21 +24,21 @@
 
         <!-- javascript -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="js/bootstrap/bootstrap.min.js"></script>
-        <script src="js/theme.js"></script>
+        <script src="Ressources/js/bootstrap/bootstrap.min.js"></script>
+        <script src="Ressources/js/theme.js"></script>
     </head>
     <body id="signup">
-        <a href="/" class="logo">
+        <a href="/Mediappp" class="logo">
             <i class="brankic-pen"></i>
         </a>
-        
+
         <h3>Nouveau médiathécaire</h3>
         <div class="content">
-            
+
             <div class="alert-danger">
                 <c:out value="${requestScope.erreur}"/>
             </div>
-            
+
             <form method="POST" action="Register">
                 <div class="fields">
                     <strong>Informations personnelles</strong>
@@ -58,11 +57,11 @@
             </form>
         </div>
         <div class="bottom-wrapper">
-		<div class="message">
-			<span>Accéder à votre tableau de bord</span>
-			<a href="/Dashboard">ici</a>.
-		</div>
-	</div>
+            <div class="message">
+                <span>Accéder à votre tableau de bord</span>
+                <a href="/Mediapp/Dashboard">ici</a>.
+            </div>
+        </div>
 
     </body>
 </html>

@@ -10,7 +10,9 @@
             <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/hibernate.cfg.xml</file>
         </group>
         <group name="TP0">
+            <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/WEB-INF/ajout_media.jsp</file>
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/WEB-INF/inscription.jsp</file>
+            <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/index.html</file>
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/src/java/Servlet/RegisterServlet.java</file>
         </group>
     </open-files>

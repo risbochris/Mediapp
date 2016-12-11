@@ -1,5 +1,5 @@
 <%-- 
-    Document   : inscription
+    Document   : inscriptions
     Author     : risbochris
 --%>
 
@@ -28,11 +28,11 @@
         <script src="Ressources/js/theme.js"></script>
     </head>
     <body id="signup">
-        <a href="/Mediappp" class="logo">
+        <a href="/Mediapp" class="logo">
             <i class="brankic-pen"></i>
         </a>
 
-        <h3>Nouveau médiathécaire</h3>
+        <h3>Nouveau Média   </h3>
         <div class="content">
 
             <div class="alert-danger">
@@ -41,18 +41,29 @@
 
             <form method="POST" action="Register">
                 <div class="fields">
-                    <strong>Informations personnelles</strong>
-                    <input class="form-control" name="nom" type="text" placeholder="Nom" />
-                    <input class="form-control" name="prenom" type="text" placeholder="Prénoms" />
-                    <input class="form-control" name="adresse" type="text" placeholder="Adresse complète" />
-                </div>
-                <div class="fields">
-                    <strong>Informations de connexion</strong>
-                    <input class="form-control" name="mail" type="text" placeholder="Email" />
-                    <input class="form-control" name="pwd" type="password" placeholder="Mot de passe" />
+                    <strong>Informations Média</strong>
+                    <div class="btn-group pull-right" data-toggle="buttons" >
+                        <label class="btn btn-default active">
+                            <input type="radio" name="type" id="option1" value="Livre"/> Livre
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="type" id="option1" value="CD"/> CD
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="type" id="option2"  value="DVD"/> DVD
+                        </label>
+                    </div>
+                    <input class="form-control" name="ref" type="text" placeholder="ISBN" />
+                    <input class="form-control" name="titre" type="text" placeholder="Titre" />
+                    <input class="form-control" name="auteur" type="text" placeholder="Auteur" />
+                    <input class="form-control" name="annee" type="number" placeholder="Année" />
+                    <input class="form-control" name="desc" type="text" placeholder="Description" />
+                    <input class="form-control" name="local" type="text" placeholder="Localisation" />
+                    <input class="form-control" name="volume" id="prm" type="text" placeholder="Nombre de page ou durée" />
+
                 </div>
                 <div class="signup">
-                    <input type="submit" value="Inscription" class="btn btn-success btn-lg" />	
+                    <input type="submit" value="Ajouter" class="btn btn-success btn-lg" />	
                 </div>
             </form>
         </div>
@@ -62,6 +73,11 @@
                 <a href="/Mediapp/Dashboard">ici</a>.
             </div>
         </div>
-
+<!--        <script type="text/javascript">
+            $(function change() {
+                var el = Document.getElementById("prm").placeholder=""
+                });
+            });
+        </script>-->
     </body>
 </html>

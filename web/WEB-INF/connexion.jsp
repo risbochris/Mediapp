@@ -26,8 +26,8 @@
 
                     <!-- javascript -->
                     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-                    <script src="js/bootstrap/bootstrap.min.js"></script>
-                    <script src="js/theme.js"></script>
+                    <script src="Ressources/js/bootstrap/bootstrap.min.js"></script>
+                    <script src="Ressources/js/theme.js"></script>
                 </head>
                 <body id="signin" class="clear">
 
@@ -42,7 +42,7 @@
                         </a>
                     </div>
 
-                    <a href="index.html" class="logo">
+                    <a href="/Mediappp" class="logo">
                         <i class="brankic-pen"></i>
                     </a>
 
@@ -67,7 +67,7 @@
                     <div class="bottom-wrapper">
                         <div class="message">
                             <span>Don't have an account?</span>
-                            <a href="signup.html">Sign up here</a>.
+                            <a href="/Mediappp">Sign up here</a>.
                         </div>
                     </div>
 
