@@ -24,7 +24,7 @@ public class LibrarianDao extends Dao<Librarian> {
     }
 
     public Librarian getLibrarianByEmail(String email) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
         Query query=session.createQuery("From Librarian l where l.mailUser=:email");
         query.setString("email", email);

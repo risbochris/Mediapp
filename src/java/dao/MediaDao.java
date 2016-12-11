@@ -7,6 +7,7 @@ package dao;
 
 import entities.Librarian;
 import entities.Media;
+import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -17,7 +18,7 @@ import org.hibernate.Session;
 public class MediaDao extends Dao<Media>{
     
     public Media getMediaByRed(String ref){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Session session =sessionFactory.getCurrentSession();
         session.beginTransaction();
         Query query=session.createQuery("From Media m where m.codeMedia=:ref");
         query.setString("email", ref);
@@ -25,4 +26,5 @@ public class MediaDao extends Dao<Media>{
         session.getTransaction().commit();
         return media;
     }
+    
 }

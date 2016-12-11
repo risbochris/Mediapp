@@ -17,7 +17,7 @@ import org.hibernate.SessionFactory;
  */
 public class Dao<T> implements AbstractDao<T>{
     
-    private SessionFactory sessionFactory;
+    protected SessionFactory sessionFactory;
     
     public Dao() {
 	this.sessionFactory = HibernateUtil.getSessionFactory();
@@ -102,4 +102,14 @@ public class Dao<T> implements AbstractDao<T>{
 
 		return result;
 	}
+
+    @Override
+    public List<T> getAll(Class<T> objClass) {
+        Session session=sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        Query query=session.createQuery("From "+objClass.getName());
+        List<T> list=query.list();
+        session.getTransaction().commit();
+        return list;
+    }
 }

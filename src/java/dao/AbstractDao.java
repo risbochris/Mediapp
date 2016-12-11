@@ -19,5 +19,5 @@ public interface AbstractDao<T> {
     public boolean updateEntity(T object);
     public boolean deleteEntity(T object);
     public List<T> query(String hsql, Map<String, Object> params);
-    
+    public List<T> getAll(Class<T> objClass);   
 }
