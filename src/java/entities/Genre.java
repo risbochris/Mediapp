@@ -27,6 +27,14 @@ public class Genre implements Serializable {
     @Column(name = "LIB_GENRE")
     private String libGenre;
 
+    private Genre() {
+    }
+
+    
+    public Genre(String genre) {
+        this.libGenre=genre;
+    }
+
     public Long getCodeGenre() {
         return codeGenre;
     }

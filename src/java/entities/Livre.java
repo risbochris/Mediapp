@@ -20,6 +20,11 @@ public class Livre extends Media {
     @Column(name = "NB_PAGES")
     private Integer nbPages;
 
+    
+    public Livre(String ref, String titre, String auteur, int annee, String genre, String local,String desc) {
+        super(ref, titre,auteur,annee,genre,local,desc);
+    }
+
     public Integer getNbPages() {
         return nbPages;
     }

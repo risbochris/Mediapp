@@ -24,30 +24,19 @@ public class Localisation implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODE_LOCAL")
     private Long codeLocal;
-    @Column(name = "SALLE")
-    private String salle;
-    @Column(name = "RAYON")
-    private String rayon;
-
+    @Column(name = "EMPLACEMENT")
+    private String emplacement;
+    
     public Long getCodeLocal() {
         return codeLocal;
     }
 
-    public String getSalle() {
-        return salle;
+    public String getEmplacement() {
+        return emplacement;
     }
 
-    public void setSalle(String salle) {
-        this.salle = salle;
+    public void setEmplacement(String emplacement) {
+        this.emplacement = emplacement;
     }
-
-    public String getRayon() {
-        return rayon;
-    }
-
-    public void setRayon(String rayon) {
-        this.rayon = rayon;
-    }
-
     
 }

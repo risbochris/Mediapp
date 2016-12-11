@@ -37,17 +37,26 @@ public class Media implements Serializable {
     @Column(name = "ANNEE")
     private Integer annee;
     @Column(name = "DESC_MEDIA")
-    private Long descMedia;
+    private String descMedia;
     @Column(name = "NB_MEDIA")
     private Integer nbMedia;
-    @ManyToOne
-    @JoinColumn(name = "CODE_GENRE")
-    private Genre genre;
-    @ManyToOne
-    @JoinColumn(name = "CODE_LOCAL")
-    private Localisation local;
+    @JoinColumn(name = "GENRE_MEDIA")
+    private String genre;
+    @JoinColumn(name = "LOCAL_MEDIA")
+    private String local;
 
+    private Media() {
+    }
     
+    public Media(String ref, String titre, String auteur, int annee, String genre, String local, String desc){
+        this.codeMedia=ref;
+        this.titre=titre;
+        this.auteur=auteur;
+        this.annee=annee;
+        this.genre=genre;
+        this.local=local;
+        this.descMedia=desc;
+    }
     public Long getId() {
         return id;
     }
@@ -92,27 +101,27 @@ public class Media implements Serializable {
         this.nbMedia = nbMedia;
     }
     
-    public Long getDescMedia() {
+    public String getDescMedia() {
         return descMedia;
     }
 
-    public void setDescMedia(Long descMedia) {
+    public void setDescMedia(String descMedia) {
         this.descMedia = descMedia;
     }
 
-    public Genre getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
     
-     public Localisation getLocal() {
+     public String getLocal() {
         return local;
     }
 
-    public void setLocal(Localisation local) {
+    public void setLocal(String local) {
         this.local = local;
     }
     

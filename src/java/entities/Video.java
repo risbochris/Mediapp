@@ -20,6 +20,10 @@ public class Video extends Media {
     @Column(name = "DUREE_VIDEO")
     private Integer dureeVideo;
 
+    public Video(String ref, String titre, String auteur, int annee, String genre, String local, String desc) {
+        super(ref, titre, auteur, annee, genre, local, desc);
+    }
+
     public Integer getDureeVideo() {
         return dureeVideo;
     }

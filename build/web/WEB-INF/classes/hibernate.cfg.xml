@@ -11,8 +11,6 @@
     <property name="hibernate.hbm2ddl.auto">update</property>
     <property name="hibernate.show_sql">true</property>
     <mapping class="entities.Librarian"/> 
-    <mapping class="entities.Genre"/>
-    <mapping class="entities.Localisation"/>
     <mapping class="entities.Media"/>
     <mapping class="entities.Audio"/>
     <mapping class="entities.Video"/>

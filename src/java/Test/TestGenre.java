@@ -34,13 +34,6 @@ public class TestGenre extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Genre genre = new Genre();
-        genre.setLibGenre("Rock");
-        Dao<Genre> daogenre = new Dao<Genre>();
-        daogenre.saveEntity(genre);
-        if(genre.getCodeGenre()!= null)
-            System.out.println(genre.getCodeGenre());
-        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

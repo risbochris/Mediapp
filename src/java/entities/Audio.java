@@ -20,6 +20,10 @@ public class Audio extends Media {
    @Column(name = "DUREE_AUDIO")
    private Integer dureeAudio;
 
+    public Audio(String ref, String titre, String auteur, int annee, String genre, String local, String desc) {
+        super(ref, titre, auteur, annee, genre, local, desc);
+    }
+
     public Integer getDureeAudio() {
         return dureeAudio;
     }
