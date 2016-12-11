@@ -32,9 +32,13 @@
         <a href="/" class="logo">
             <i class="brankic-pen"></i>
         </a>
-
+        
         <h3>Nouveau médiathécaire</h3>
         <div class="content">
+            
+            <div class="alert-danger">
+                <c:out value="${requestScope.erreur}"/>
+            </div>
             
             <form method="POST" action="Register">
                 <div class="fields">

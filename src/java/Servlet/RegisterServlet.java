@@ -27,12 +27,11 @@ public class RegisterServlet extends HttpServlet {
     public static final String GET_VIEW = "WEB-INF/inscription.jsp";
     public static final String POST_VIEW = "WEB-INF/inscription.jsp";
 
-    Map<String, String> erreurs = new HashMap<String, String>();
-
+    boolean error=false;
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("erreurs", erreurs);
         request.getRequestDispatcher("WEB-INF/inscription.jsp").forward(request, response);
 
     }
@@ -49,10 +48,12 @@ public class RegisterServlet extends HttpServlet {
         LibrarianDao daolib = new LibrarianDao();
         Librarian librarian = daolib.getLibrarianByEmail(email);
         if (nom == null || prenom == null || adresse == null || email == null || password == null || !ServletUtils.isEmail(email)) {
-            erreurs.put("erreur", "Veuillez remplir correctement tous les champs obligatoire!");
+            request.setAttribute("erreur", "Veuillez remplir correctement tous les champs obligatoire!");
+            error=true;
         } else if (librarian != null) {
             // TODO check if the email is well formed
-            erreurs.put("erreur", "Cet utilisateur existe déjà!");
+            request.setAttribute("erreur", "Cet utilisateur existe déjà");
+            error=true;
         } else {
             // Create the new user object
             librarian = new Librarian(nom, prenom, adresse, email, ServletUtils.cryptPassword(password));
@@ -62,12 +63,11 @@ public class RegisterServlet extends HttpServlet {
 
             // sign the user in
             if (librarian.getId() == null) {
-                erreurs.put("erreur", "Erreur interne survenue, veuillez reesayez plutard!");
+                request.setAttribute("erreur", "Erreur interne survenue, veuillez reesayez plutard!");
             }
         }
         
-        if (!erreurs.isEmpty()) {
-                request.setAttribute("erreurs", erreurs);
+        if (!error) {
                 request.getRequestDispatcher(GET_VIEW).forward(request, response);
                 return;
         }
