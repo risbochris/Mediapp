@@ -32,6 +32,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setAttribute("erreurs", erreurs);
         request.getRequestDispatcher("WEB-INF/inscription.jsp").forward(request, response);
 
     }
@@ -48,10 +49,10 @@ public class RegisterServlet extends HttpServlet {
         LibrarianDao daolib = new LibrarianDao();
         Librarian librarian = daolib.getLibrarianByEmail(email);
         if (nom == null || prenom == null || adresse == null || email == null || password == null || !ServletUtils.isEmail(email)) {
-            erreurs.put("form", "Veuillez remplir correctement tous les champs obligatoire!");
+            erreurs.put("erreur", "Veuillez remplir correctement tous les champs obligatoire!");
         } else if (librarian != null) {
             // TODO check if the email is well formed
-            erreurs.put("exist", "Cet utilisateur existe déjà!");
+            erreurs.put("erreur", "Cet utilisateur existe déjà!");
         } else {
             // Create the new user object
             librarian = new Librarian(nom, prenom, adresse, email, ServletUtils.cryptPassword(password));
@@ -61,7 +62,7 @@ public class RegisterServlet extends HttpServlet {
 
             // sign the user in
             if (librarian.getId() == null) {
-                erreurs.put("db", "Erreur interne survenue, veuillez reesayez plutard!");
+                erreurs.put("erreur", "Erreur interne survenue, veuillez reesayez plutard!");
             }
         }
         

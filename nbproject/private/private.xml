@@ -9,5 +9,9 @@
             <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Librarian.java</file>
             <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/hibernate.cfg.xml</file>
         </group>
+        <group name="TP0">
+            <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/WEB-INF/inscription.jsp</file>
+            <file>file:/home/risbochris/NetBeansProjects/Mediapp/src/java/Servlet/RegisterServlet.java</file>
+        </group>
     </open-files>
 </project-private>
