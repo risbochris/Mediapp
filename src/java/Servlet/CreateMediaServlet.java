@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CreateMediaServlet extends HttpServlet {
 
     public static final String GET_MEDIA = "WEB-INF/ajout_media.jsp";
-    public static final String POST_MEDIA = "listMedias.jsp";
+    public static final String POST_MEDIA = "WEB-INF/listMedias.jsp";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +42,7 @@ public class CreateMediaServlet extends HttpServlet {
         String genre = ServletUtils.getParam(request, "genre");
         String type = ServletUtils.getParam(request, "type");
         String local = ServletUtils.getParam(request, "local");
-        String volum = ServletUtils.getParam(request, "vol");
+        String volum = ServletUtils.getParam(request, "volume");
 
         MediaDao mdao = new MediaDao();
         int vol = 0;
@@ -56,7 +56,7 @@ public class CreateMediaServlet extends HttpServlet {
             intval = true;
         }
 
-        if (intval || ref == null || titre == null || auteur == null || genre == null || type == null || local == null) {
+        if (intval || ref == null || titre == null || auteur == null || genre == null|| titre==null || local == null) {
             request.setAttribute("erreur", "Veuillez remplir correctement tous les champs obligatoires!");
             error = true;
         } else {
@@ -65,11 +65,11 @@ public class CreateMediaServlet extends HttpServlet {
                 request.setAttribute("erreur", "Ce media existe déjà, veuillez verifié la référence!");
                 error = true;
             } else {
-                if(type.equals("livre")){
+                if(type.equals("Livre")){
                     Livre lv=new Livre(ref, titre, auteur, an, genre, local, desc);
                     lv.setNbPages(vol);
                     mdao.saveEntity(lv);
-                }else if(type.equals("audio")){
+                }else if(type.equals("Audio")){
                    Audio aud=new Audio(ref, titre, auteur, an, genre, local,desc);
                    aud.setDureeAudio(vol);
                    mdao.saveEntity(aud);
@@ -83,7 +83,7 @@ public class CreateMediaServlet extends HttpServlet {
             }
         }
         
-        if (!error) {
+        if (error) {
                 request.getRequestDispatcher(GET_MEDIA).forward(request, response);
                 return;
         }

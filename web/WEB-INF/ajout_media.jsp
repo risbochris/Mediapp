@@ -39,7 +39,7 @@
                 <c:out value="${requestScope.erreur}"/>
             </div>
 
-            <form method="POST" action="Register">
+            <form method="POST" action="CreateMedia">
                 <div class="fields">
                     <strong>Informations Média</strong>
                     <div class="btn-group pull-right" data-toggle="buttons" >
@@ -47,15 +47,16 @@
                             <input type="radio" name="type" id="option1" value="Livre"/> Livre
                         </label>
                         <label class="btn btn-default">
-                            <input type="radio" name="type" id="option1" value="CD"/> CD
+                            <input type="radio" name="type" id="option1" value="Video"/> CD
                         </label>
                         <label class="btn btn-default">
-                            <input type="radio" name="type" id="option2"  value="DVD"/> DVD
+                            <input type="radio" name="type" id="option2"  value="Audio"/> DVD
                         </label>
                     </div>
                     <input class="form-control" name="ref" type="text" placeholder="ISBN" />
                     <input class="form-control" name="titre" type="text" placeholder="Titre" />
                     <input class="form-control" name="auteur" type="text" placeholder="Auteur" />
+                     <input class="form-control" name="genre" type="text" placeholder="Genre" />
                     <input class="form-control" name="annee" type="number" placeholder="Année" />
                     <input class="form-control" name="desc" type="text" placeholder="Description" />
                     <input class="form-control" name="local" type="text" placeholder="Localisation" />

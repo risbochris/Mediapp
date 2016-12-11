@@ -2,18 +2,28 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/Dao.java</file>
-            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/Servlet/RegisterServlet.java</file>
-            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/LibrarianDao.java</file>
-            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Librarian.java</file>
-            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/hibernate.cfg.xml</file>
-        </group>
         <group name="TP0">
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/WEB-INF/ajout_media.jsp</file>
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/WEB-INF/inscription.jsp</file>
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/web/index.html</file>
             <file>file:/home/risbochris/NetBeansProjects/Mediapp/src/java/Servlet/RegisterServlet.java</file>
+        </group>
+        <group>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/MediaDao.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/Dao.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/Servlet/CreateMediaServlet.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/Test/TestGenre.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Localisation.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Media.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Livre.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Audio.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/AbstractDao.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/entities/Video.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/Servlet/RegisterServlet.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/web/WEB-INF/connexion.jsp</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/dao/LibrarianDao.java</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/hibernate.cfg.xml</file>
+            <file>file:/home/knazanga/NetBeansProjects/Mediapp/src/java/Servlet/CatalogueMedia.java</file>
         </group>
     </open-files>
 </project-private>

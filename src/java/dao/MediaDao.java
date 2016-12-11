@@ -21,7 +21,7 @@ public class MediaDao extends Dao<Media>{
         Session session =sessionFactory.getCurrentSession();
         session.beginTransaction();
         Query query=session.createQuery("From Media m where m.codeMedia=:ref");
-        query.setString("email", ref);
+        query.setString("ref", ref);
         Media media=(Media) query.uniqueResult();
         session.getTransaction().commit();
         return media;
