@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/Mediapp</property>
+    <property name="hibernate.connection.username">Mediapp</property>
+    <property name="hibernate.connection.password">Mediapp</property>
+    <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping class="entities.Librarian"/> 
+    <mapping class="entities.Genre"/>
+    <mapping class="entities.Localisation"/>
+    <mapping class="entities.Media"/>
+    <mapping class="entities.Audio"/>
+    <mapping class="entities.Video"/>
+    <mapping class="entities.Livre"/>
+    <mapping class="entities.Membre"/>
+    <mapping class="entities.Emprunt"/> 
+  </session-factory>
+</hibernate-configuration>
