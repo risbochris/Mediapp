@@ -9,7 +9,9 @@ import entities.Librarian;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 /**
  *
@@ -23,9 +25,12 @@ public class LibrarianDao extends Dao<Librarian> {
 
     public Librarian getLibrarianByEmail(String email) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Map<String,Object> param=new HashMap<>();
-        param.put("email", email);
-        return this.query("From Librarian  l where l.mailUser=:email", param).get(0);
+        session.beginTransaction();
+        Query query=session.createQuery("From Librarian l where l.mailUser=:email");
+        query.setString("email", email);
+        Librarian lib=(Librarian) query.uniqueResult();
+        session.getTransaction().commit();
+        return lib;
     }
 
 }

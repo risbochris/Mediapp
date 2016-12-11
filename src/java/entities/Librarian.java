@@ -29,8 +29,10 @@ public class Librarian implements Serializable {
     private String prenomUser;
     @Column(name = "ADRESSE_USER")
     private String adresseUser;
+    
     @Column(name = "MAIL_USER")
     private String mailUser;
+    
     @Column(name = "PWD_USER")
     private String pwdUser;
 
